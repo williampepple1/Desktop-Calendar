@@ -1,0 +1,11 @@
+{
+  "identifier": "default",
+  "description": "Default capability for the app",
+  "windows": ["*"],
+  "permissions": [
+    "core:default",
+    "shell:default",
+    "notification:default",
+    "notification:allow-notification"
+  ]
+}
