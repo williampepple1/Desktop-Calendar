@@ -87,7 +87,7 @@ export function Calendar() {
 
       {/* Calendar Grid */}
       <div className="flex-1 grid grid-cols-7 grid-rows-6">
-          {days.map((day, idx) => {
+          {days.map((day) => {
               const dayEvents = events.filter(e => {
                   try {
                       // Simple date match on start time string (assuming ISO)
@@ -115,7 +115,7 @@ export function Calendar() {
                       <div className="mt-1 space-y-1">
                           {dayEvents.map(ev => (
                               <div key={ev.id} className="text-xs p-1 bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 rounded truncate">
-                                  {ev.time_str /* calculate time from ev.start_time? */} 
+                                  {format(parseISO(ev.start_time), "HH:mm")} 
                                   {ev.title}
                               </div>
                           ))}

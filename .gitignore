@@ -20,6 +20,6 @@ src-tauri/gen/
 Thumbs.db
 
 # IDE
-.vscode/
+
 .idea/
 *.swp
